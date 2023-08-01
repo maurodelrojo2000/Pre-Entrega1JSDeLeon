@@ -1,6 +1,5 @@
 let nombre = prompt("Por favor,ingresa tu nombre");
 let edad = parseInt(prompt("A continuacion,ingresa tu edad"));
-
 if (edad < 18) {
   alert("No puede usar esta calculadora");
 } else if (edad >= 18) {
@@ -9,6 +8,12 @@ if (edad < 18) {
 
 let peso = parseInt(prompt("Ingresa tu peso en kg"));
 let estatura = parseInt(prompt("Ingresa Tu estatura en cm"));
+
+while (isNaN(peso) || isNaN(estatura)) {
+  alert('datos no numéricos')
+  peso = parseInt(prompt("Ingresa tu peso en kg"));
+  estatura = parseInt(prompt("Ingresa Tu estatura en cm"));
+}
 
 function calcularIMC() {
   let resultado = peso / ((estatura / 100) * (estatura / 100));
